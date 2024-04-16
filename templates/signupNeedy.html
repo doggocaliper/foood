@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <title>0 crumbs</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href='https://fonts.googleapis.com/css?family=Bakbak One' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel='stylesheet'>
+  <style>
+  h1 {
+      font-family: 'Bakbak One';font-size: 30px;
+      color: black;
+  }
+  h2 {
+      font-family: 'Yanone Kaffeesatz';font-size: 25px;
+      color: black;
+  }
+  nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    display: inline-block;
+    font-family: "Yanone Kaffeesatz";
+    transition: background-color 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: #555;
+  }
+  </style>
+</head>
+<body>
+  <center>
+    <img src=".././static/0 crumbs.png" height="125" width="125">
+    <br><br>
+    <nav>
+      <a href="/">about</a>
+      <a href="signupFood.html">advertise service</a>
+      <a href="signupNeedy.html">advertise needy</a>
+      <a href="viewFood.html">view service</a>
+      <a href="viewNeedy.html">view needy</a>
+    </nav>
+    <h1>advertise your needs</h1>
+    <image src="https://y.yarn.co/78b23089-0134-4479-bc50-330b81454dfe_text.gif" height="200" width="250">
+    <h2>
+    <form method="POST">
+      <label for="name1">your beneficiary name: </label>
+      <input type="text" id="name1" name="name1" required><br><br>
+      <label for="mouths">how many people/mouths: </label>
+      <input type="text" id="mouths" name="mouths" required><br><br>
+      <label for="contact1">email: </label>
+      <input type="text" id="contact1" name="contact1" required><br><br>
+      <label for="address1">beneficiary address: </label>
+      <input type="text" id="address1" name="address1" required><br><br>
+      <input type="submit" value="submit">
+    </form>
+    </h2>
+  </center>
+</body>
+</html>

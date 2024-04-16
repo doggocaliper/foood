@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <title>0 crumbs</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href='https://fonts.googleapis.com/css?family=Bakbak One' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel='stylesheet'>
+  <style>
+  h1 {
+      font-family: 'Bakbak One';font-size: 30px;
+      color: black;
+  }
+  h2 {
+      font-family: 'Yanone Kaffeesatz';font-size: 25px;
+      color: black;
+  }
+  nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    display: inline-block;
+    font-family: "Yanone Kaffeesatz";
+    transition: background-color 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: #555;
+  }
+  </style>
+</head>
+<body>
+  <center>
+    <img src=".././static/0 crumbs.png" height="125" width="125">
+    <br><br>
+    <nav>
+      <a href="/">about</a>
+      <a href="signupFood.html">advertise service</a>
+      <a href="signupNeedy.html">advertise needy</a>
+      <a href="viewFood.html">view service</a>
+      <a href="viewNeedy.html">view needy</a>
+    </nav>
+    <h1>view participating beneficiaries</h1>
+    {% if needys %}
+    <table border="1" cellpadding="10" cellspacing="0">
+      <tr>
+        <th>name</th>
+        <th>mouths to feed</th>
+        <th>contact</th>
+        <th>address</th>
+      </tr>
+      {% for needy in needys %}
+      <tr>
+        <td>{{ needy[0] }}</td>
+        <td>{{ needy[1] }}</td>
+        <td>{{ needy[2] }}</td>
+        <td>{{ needy[3] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% else %}
+      <p>No beneficiaries yet.</p>    
+    {% endif %}
+  </center>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <title>0 crumbs</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href='https://fonts.googleapis.com/css?family=Bakbak One' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel='stylesheet'>
+  <style>
+  h1 {
+      font-family: 'Bakbak One';font-size: 30px;
+      color: black;
+  }
+  h2 {
+      font-family: 'Yanone Kaffeesatz';font-size: 25px;
+      color: black;
+  }
+  nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    display: inline-block;
+    font-family: "Yanone Kaffeesatz";
+    transition: background-color 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: #555;
+  }
+  </style>
+</head>
+<body>
+  <center>
+    <img src=".././static/0 crumbs.png" height="125" width="125">
+    <br><br>
+    <nav>
+      <a href="/">about</a>
+      <a href="signupFood.html">advertise service</a>
+      <a href="signupNeedy.html">advertise needy</a>
+      <a href="viewFood.html">view service</a>
+      <a href="viewNeedy.html">view needy</a>
+    </nav>
+    <h1>advertise your food stall</h1>
+    <img src="https://krishastudio.com//wp-content/uploads/2021/06/5.gif" height="200" width="250">
+    <h2>
+    <form method="POST" enctype="multipart/form-data">
+      <label for="name">your stall name: </label>
+      <input type="text" id="name" name="name" required><br><br>
+      <label for="food">what food your stall have: </label>
+      <input type="text" id="food" name="food" required><br><br>
+      <label for="contact">email: </label>
+      <input type="text" id="contact" name="contact" required><br><br>
+      <label for="address">stall address: </label>
+      <input type="text" id="address" name="address" required><br><br>
+      <label for="validity">image proof of ur stall: </label>
+      <input type="file" id="validity" name="validity" required><br><br>
+      <input type="submit" value="submit">
+    </form>
+    </h2>
+  </center>
+</body>
+</html>
